@@ -1,0 +1,8 @@
+{% if is_detail_view is not True %}
+    <a href="{% url 'app:content' content.id%}">{{ content.title }}</a>
+{% endif %}
+
+{% if is_detail_view is True %}
+    {{ content.text }}<br>
+    <a href="{% url 'app:home' %}">Back</a>
+{% endif %}
