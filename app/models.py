@@ -6,6 +6,7 @@ class Content(models.Model):
     title = models.CharField(max_length=254, null=False, blank=False)
     text = models.TextField(null=False, blank=False)
     slug = models.SlugField(unique=True, null=False, blank=False)
+    is_published = models.BooleanField(default=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
