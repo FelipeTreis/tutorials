@@ -1,14 +1,17 @@
-{% if is_detail_view is not True %}
-    <div class="main-content">
-        <a class="content-list" href="{% url 'app:content' content.id%}">- {{ content.title }}</a>
+<div class="content content-list-item">
+    <div class="content-title-container">
+        {% if is_detail_view is not True %}
+            <div class="main-content">
+                <a class="content-list" href="{% url 'app:content' content.id%}">- {{ content.title }}</a>
+            </div>
+        {% endif %}
     </div>
-{% endif %}
-
-{% if is_detail_view is True %}
-    <div class="main-content-text">
-        {{ content.text }}
-    </div>
-    <div class="main-content">
-        <a class="content-list" href="{% url 'app:home' %}"><i class="fas fa-backward"></i> back home</a>
-    </div>
-{% endif %}
+    {% if is_detail_view is True %}
+        <div class="main-content-text">
+            {{ content.text }}
+        </div>
+        <div class="main-content">
+            <a class="content-list" href="{% url 'app:home' %}"><i class="fas fa-backward"></i> back home</a>
+        </div>
+    {% endif %}
+</div>

@@ -59,7 +59,7 @@ h6 {
 /* Header and Container */
 
 .main-header-container {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
@@ -71,7 +71,7 @@ h6 {
 
 .main-logo {
   font-size: 5rem;
-  color: var(--color-dark-text);
+  color: var(--color-light-text);
   text-decoration: none;
   display: flex;
   flex-flow: row nowrap;
@@ -93,9 +93,10 @@ h6 {
 }
 
 .main-content-text {
-  text-align: center;
+  text-align: left;
   padding-top: 0;
-  padding: var(--spacing-gutter-medium);
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .content-list {
@@ -109,19 +110,36 @@ h6 {
   color: var(--color-dark-text);
 }
 
+.content {
+  background-color: var(--color-white);
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: all 300ms ease-in-out;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.content-list-item {
+  max-width: 100%;
+  height: fit-content;
+}
+
+.content-title-container {
+  padding: var(--spacing-gutter-medium);
+  padding-bottom: 2rem;
+}
+
 /* footer */
 
 .main-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
   background: var(--color-primary-dark);
-  color: var(--color-light-text);
+  color: var(--color-gray-0);
   padding: var(--spacing-gutter-large);
-  font-size: 1.8rem;
+  padding-top: 2rem;
+  font-size: 1.5rem;
   box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0.2, 0, 0.2);
 }
 
