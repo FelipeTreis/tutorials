@@ -1,0 +1,136 @@
+:root {
+  --color-primary: #e4e4e4;
+  --color-primary-hover: #201f35;
+  --color-primary-dark: #141620;
+  --color-primary-dark-hover: #424242;
+  --color-primary-light: #dddddd;
+  --color-primary-light-hover: #ffffff;
+
+  --color-dark-text: #141620;
+  --color-light-text: #dddddd;
+
+  --color-info-dark: #263644;
+
+  --color-gray-0: #f9f9f9;
+  --color-gray-1: #e0e0e0;
+  --color-gray-2: #c7c7c7;
+  --color-gray-3: #aeaeae;
+  --color-gray-4: #959595;
+  --color-gray-5: #7d7d7d;
+  --color-gray-6: #646464;
+  --color-gray-7: #4b4b4b;
+  --color-gray-8: #323232;
+  --color-gray-9: #191919;
+
+  --font-primary: sans-serif;
+  --font-headings: "Roboto Slab", serif;
+
+  --spacing-gutter-medium: 2rem;
+  --spacing-gutter-large: 3rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  color: var(--color-dark-text);
+  background-color: var(--color-gray-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  font-size: 2rem;
+}
+
+/* Header and Container */
+
+.main-header-container {
+  background-color: var(--color-primary-light);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: var(--spacing-gutter-medium);
+}
+
+.main-logo {
+  font-size: 5rem;
+  color: var(--color-dark-text);
+  text-decoration: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.main-logo-icon {
+  margin-right: 2rem;
+}
+
+/* Content */
+
+.main-content {
+  padding-top: 0;
+  padding: var(--spacing-gutter-medium);
+}
+
+.main-content-text {
+  text-align: center;
+  padding-top: 0;
+  padding: var(--spacing-gutter-medium);
+}
+
+.content-list {
+  color: var(--color-dark-text);
+  text-decoration: none;
+  font-size: 2;
+  transition: all 300ms ease-in-out;
+}
+
+.content-list:hover {
+  color: var(--color-dark-text);
+}
+
+/* footer */
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  background: var(--color-primary-dark);
+  color: var(--color-light-text);
+  padding: var(--spacing-gutter-large);
+  font-size: 1.8rem;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0.2, 0, 0.2);
+}
+
+.main-footer a {
+  color: var(--color-light-text);
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.main-footer a:hover {
+  color: var(--color-light-text);
+}
