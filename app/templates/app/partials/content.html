@@ -1,8 +1,14 @@
 {% if is_detail_view is not True %}
-    <a href="{% url 'app:content' content.id%}">{{ content.title }}</a>
+    <div class="main-content">
+        <a class="content-list" href="{% url 'app:content' content.id%}">- {{ content.title }}</a>
+    </div>
 {% endif %}
 
 {% if is_detail_view is True %}
-    {{ content.text }}<br>
-    <a href="{% url 'app:home' %}">Back</a>
+    <div class="main-content-text">
+        {{ content.text }}
+    </div>
+    <div class="main-content">
+        <a class="content-list" href="{% url 'app:home' %}"><i class="fas fa-backward"></i> back home</a>
+    </div>
 {% endif %}
